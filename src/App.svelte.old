@@ -1,0 +1,17 @@
+<script>
+  import { Sheet } from "svelte-sheets";
+
+  let style = {
+    A1: "background-color: red",
+  };
+  let mergeCells = {
+    A1: [5, 0], // 5 horizontally merged cell (colspan), 0 vertically merged cells (rowspan)
+  };
+  let columns = [{ width: "50px" }];
+  let data = [
+    ["mazda", "renault", "volkswagen"][("10000km", "20000km", "300000km")],
+  ];
+</script>
+
+<Sheet {style} {mergeCells} {columns} {data} />
+
